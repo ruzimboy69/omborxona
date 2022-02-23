@@ -1,0 +1,146 @@
+.container{
+    margin-top: 15px;
+}
+.row{
+    position: relative;
+}
+.btn{
+    color:#fff;
+    width: 100%;
+}
+.col-md-4{
+    padding-top: 50px;
+}
+.form-control{
+    background-color: #f8f6f6;
+    color: #d2d2d2;
+    border: 1px solid #faf6f6;
+}
+.col-md-8{
+    text-align: center;
+}
+.footer{
+    text-align: center;
+    color: #d2d2d2;
+}
+.navbar{
+    /*box-shadow: 40px 20px 45px rgba(35, 34, 34, 0.1);*/
+    padding: 0px 15px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: #fff;
+}
+
+.admin{
+    margin-left: 800px;
+}
+.nav-item{
+    padding: 10px;
+    /*background-color: #F4F4F4;*/
+}
+.nav-item:hover{
+    background-color: #F4F4F4;
+}
+
+.nav-link{
+    text-decoration: none;
+    color:#000;
+}
+span{
+    font-size: 11px;
+    color: #2F2F2F;
+    opacity: 0.5;
+    margin-left: 25px;
+}
+.dashboard{
+    background-color: #E5E5E5;
+}
+
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+.section_side{
+
+}
+
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    /*background-color: #f1f1f1;*/
+    position: fixed;
+    background-color: #4859a2;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color:  rgba(255, 255, 255, 0.54);
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+
+div.content {
+    margin-left: 200px;
+    padding: 40px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+
+.Menu ul{
+    list-style-type: none;
+    width: 100%;
+    padding: 0px;
+}
+.Menu ul li{
+    padding: 5px 40px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #404f91;
+    color:  rgba(255, 255, 255, 0.54);
+
+}
+.Menu li:hover{
+    /*background-color: #E5E5E5;*/
+    background-color: #404f91;
+    color: #fff;
+
+
+}
+.Menu ul li a{
+    text-decoration: none;
+    /*color: #000;*/
+    padding-left: 10px;
+    color:  rgba(255, 255, 255, 0.54);
+
+}

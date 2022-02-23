@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>Title</title>
+    <style>
+        .container{
+            margin-top: 15px;
+        }
+        .row{
+            position: relative;
+        }
+        .btn{
+            color:#fff;
+            width: 100%;
+        }
+        .col-md-4{
+            padding-top: 50px;
+        }
+        .form-control{
+            background-color: #f8f6f6;
+            color: #d2d2d2;
+            border: 1px solid #faf6f6;
+        }
+        .col-md-8{
+            text-align: center;
+        }
+        .footer{
+            text-align: center;
+            color: #d2d2d2;
+        }
+        .navbar{
+            /*box-shadow: 40px 20px 45px rgba(35, 34, 34, 0.1);*/
+            padding: 0px 15px;
+            position: fixed;
+            top: 0;
+            z-index: 5;
+            background-color:#4859a2;
+        }
+
+        .admin{
+            margin-left: 800px;
+        }
+        .admin div{
+            color: #fff;
+        }
+        .admin span{
+            color: #fff;
+        }
+        .nav-item{
+            padding: 10px;
+            /*background-color: #F4F4F4;*/
+        }
+        .nav-item:hover{
+            background-color: #F4F4F4;
+        }
+
+        .nav-link{
+            text-decoration: none;
+            color:#000;
+        }
+        span{
+            font-size: 11px;
+            color: #2F2F2F;
+            opacity: 0.5;
+            margin-left: 25px;
+        }
+        .dashboard{
+            background-color: #E5E5E5;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
+        .section_side{
+            width: 85%;
+        }
+
+
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            /*background-color: #f1f1f1;*/
+            position: fixed;
+            background-color: #4859a2;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color:  rgba(255, 255, 255, 0.54);
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+
+
+        div.content {
+            margin-left: 200px;
+            padding: 40px 16px;
+            height: 1000px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+
+
+        .Menu ul{
+            list-style-type: none;
+            width: 100%;
+            padding: 0px;
+        }
+        .Menu ul li{
+            padding: 5px 40px;
+            width: 100%;
+            position: relative;
+            border-bottom: 1px solid #404f91;
+            color:  rgba(255, 255, 255, 0.54);
+
+        }
+        .Menu li:hover{
+            /*background-color: #E5E5E5;*/
+            background-color: #404f91;
+            color: #fff;
+
+
+        }
+        .Menu ul li a{
+            text-decoration: none;
+            /*color: #000;*/
+            padding-left: 10px;
+            color:  rgba(255, 255, 255, 0.54);
+
+        }
+        .btn a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg  border-bottom fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)"><img src="https://scargos.com/img/logo-transparent.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <div class="admin d-flex">
+                        <a class="navbar-brand" href="#">
+                            <!--                            <img src="./images/photo_2022-02-18_11-55-38.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill">-->
+                        </a>
+                        <div class="mt-2">Xolmurotov Ruzimboy <br> <span>Administrator</span></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+        <div class="section_side">
+            <div class="sidebar mt-5 Menu">
+                <ul>
+                    <li><a href="/warehouse">Ombor</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Kirim</a></li>
+                    <li><a href="#">Chiqim</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Notification</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Client</a></li>
+                </ul>
+            </div>
+            <div class="content col-md-12 mt-5">
+                <div class="col-md-2 mb-3">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"><a href="/warehouse/add">Ombor qo'shish</a></button>
+                </div>
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Yangi Ombor ma'lumotlarini kiriting</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form  action="/warehouse/add"  method="post" class="col-md-12 mt-5">
+                                    <div class="form-group">
+                                        <label for="phone">Name:</label>
+                                        <input type="text"   class="form-control" id="phone" placeholder="name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn bg-primary">Qo'shish</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 " th:each="ketmon : ${warehouses}">
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="data:image/png;base64,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" alt="rasm">
+                        </div>
+                        <div class="card-body">
+                            <h5 th:text="${ketmon.name}"/>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class=" mt-5 dashboard">-->
+<!--    <h1>jdcam cl</h1>-->
+<!--</div>-->
+</body>
+</html>
